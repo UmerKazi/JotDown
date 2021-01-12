@@ -11,9 +11,7 @@
     "server-install": "npm install",
     "install-all": "concurrently \"npm run client-install\" \"npm run server-install\" ",
     "dev": "concurrently \"npm run client\" \"npm run server\" ",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "Umer Kazi",
   "license": "ISC",
